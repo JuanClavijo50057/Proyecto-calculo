@@ -9,30 +9,18 @@ def Dfx(x):
 def SDfx(x):
     SDfunc=mt.e**-x -mt.sin(x) -2
     return SDfunc
-def newtomRaphsonMax(x0,tol):
+def newtomRaphson(x0,tol,mensaje):
     i=0
     x=0
     while abs(x0-x)>tol:
         i=i+1
         x=x0
         x0=x0-(Dfx(x0)/SDfx(x0))
-        # print("iteracion:",i)
-        # print(round(x0,7))
         
     y=fx(x0)
-    print("Punto maximo: (", round(x0,7),",",round(y,7),")")
-def newtomRaphsonMin(x0,tol):
-    i=0
-    x=0
-    while abs(x0-x)>tol:
-        i=i+1
-        x=x0
-        x0=x0-(Dfx(x0)/SDfx(x0))
-        # print("iteracion:",i)
-        # print(round(x0,7))
-        
-    y=fx(x0)
-    print("Punto minimo: (", round(x0,7),",",round(y,7),")")
+    print(mensaje,"(", round(x0,7),",",round(y,7),")")
+    
 
-newtomRaphsonMax(1, 0.5*pow(10,-5))
-newtomRaphsonMin(-1, 0.5*pow(10,-5))
+
+newtomRaphson(1, 0.9*10**-5, "punto maximo")
+newtomRaphson(-1, 0.9*10**-5, "punto minimo")

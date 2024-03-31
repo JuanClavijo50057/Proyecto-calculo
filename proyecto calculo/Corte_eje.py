@@ -17,4 +17,4 @@ def newtomRaphson(x0, tol):
         print(round(x0,7))
     print("el corte con el eje x es:", round(x0,7))    
 
-newtomRaphson(-2.5, 0.5*pow(10,-5))
+newtomRaphson(-2.5, 0.9*10**-5)
