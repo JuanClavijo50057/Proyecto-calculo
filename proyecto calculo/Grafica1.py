@@ -15,7 +15,6 @@ plt.plot(x,f)
 plt.scatter(p,z,color="black")
 plt.scatter(t,q,color="black")
 plt.scatter(a,b,color="black")
-
 plt.annotate('  (0.63748,-0.64510) maximo', xy=(0.6374874 , -0.6451056))
 plt.annotate('  (-1.37140,-2.29146) minimo', xy=(-1.3714047 , -2.2914602))
 plt.annotate('  (-2.36766,0) corte', xy=(-2.3676666 , 0))
