@@ -10,15 +10,14 @@ def g(x):
 
 # Crear el rango de valores para x
 x_full_range = np.linspace(-2, 5, 700)
-x_positive_range = np.linspace(0.1, 5, 400)
 
 # Calcular los valores de las funciones
-y_f_positive = f(x_positive_range)
+y_f_positive = f(x_full_range)
 y_g_full = g(x_full_range)
 
 # Crear la gráfica
 plt.figure(figsize=(10, 6))
-plt.plot(x_positive_range, y_f_positive, label='$f(x) = 5 - 2x^2 + \ln(x)$')
+plt.plot(x_full_range, y_f_positive, label='$f(x) = 5 - 2x^2 + \ln(x)$')
 plt.plot(x_full_range, y_g_full, label='$g(x) = e^{-x} + x^2 - \sin(x) + 1$')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
